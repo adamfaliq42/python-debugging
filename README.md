@@ -51,4 +51,69 @@ print()
 ```
 
 3. USE UNIT TEST
+
+a) PyTest
+
+~~~
+$ pip install -U pytest
+~~~
+
+For example, in __main.py__ , we have these functions:
+```python
+def add(a, b):
+  return a + b
+  
+def multiply(a, b):
+  return a * b
+```
+
+We can test them. Write these in __test_main.py__ .
+```python
+from main import add, multiply
+
+def test_add(a, b):
+  total = add(2, 3)
+  assert total == 5
+  
+def test_multiply(a, b):
+  product = multiply(2, 3)
+  assert product == 6
+```
+
+Run the test
+~~~
+$ py.test
+~~~
+
+b) Use unittest module
+
+__main__.py
+```python
+import unittest
+
+def add(x, y):
+    return x + y
+ 
+# Examples of assert method
+# assertEqual
+# assertTrue
+# assertFalse
+class test_add(unittest.TestCase):
+   def test(self):
+       self.assertEqual(add(3,4), 7)
+  
+if __name__ == "__main__":
+    unittest.main()
+```
+
+~~~
+$ python main.py
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK
+~~~
+
+
 4. USE PUDB
