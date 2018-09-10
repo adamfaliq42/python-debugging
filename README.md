@@ -87,7 +87,7 @@ $ py.test
 
 b) Use unittest module
 
-__main__.py
+__main.py__
 ```python
 import unittest
 
@@ -116,4 +116,4 @@ OK
 ~~~
 
 
-4. USE PUDB
+
