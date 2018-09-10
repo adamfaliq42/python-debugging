@@ -2,6 +2,7 @@
 Tools to debug in Python
 
 1. Debugger
+
 a) Python Debugger (PDB)
 
 - With IPython Interpreter 
